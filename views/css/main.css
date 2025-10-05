@@ -1,0 +1,168 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0093E9 0%, #80D0C7 100%);
+    min-height: 100vh;
+    padding: 40px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Main Container */
+.col-md-4 {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 147, 233, 0.3);
+    padding: 40px 30px;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Header/Title */
+p {
+    font-size: 2rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #0093E9 0%, #00D4FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 30px;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+/* Table Styling */
+.table {
+    margin: 20px 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 147, 233, 0.15);
+}
+
+.table > tbody > tr > td {
+    padding: 18px 20px;
+    font-size: 1.05rem;
+    border: none;
+    vertical-align: middle;
+}
+
+.table > tbody > tr > td:first-child {
+    font-weight: 600;
+    color: #0093E9;
+    background: linear-gradient(135deg, #E0F7FF 0%, #D4F1F4 100%);
+    width: 35%;
+}
+
+.table > tbody > tr > td:last-child {
+    color: #2C3E50;
+    text-align: left;
+}
+
+.table-hover > tbody > tr:hover {
+    background: linear-gradient(135deg, #F0FBFF 0%, #E8F8F5 100%);
+    transition: all 0.3s ease;
+    transform: scale(1.01);
+}
+
+/* Logout Link Container */
+.abc {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.abc a {
+    display: inline-block;
+    padding: 14px 40px;
+    background: linear-gradient(135deg, #0093E9 0%, #00D4FF 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    box-shadow: 0 6px 20px rgba(0, 147, 233, 0.4);
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+.abc a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 212, 255, 0.5);
+    background: linear-gradient(135deg, #00D4FF 0%, #0093E9 100%);
+}
+
+.abc a:active {
+    transform: translateY(-1px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .col-md-4 {
+        padding: 30px 20px;
+        margin: 0 15px;
+    }
+    
+    p {
+        font-size: 1.6rem;
+    }
+    
+    .table > tbody > tr > td {
+        padding: 14px 15px;
+        font-size: 0.95rem;
+    }
+    
+    .abc a {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 20px 10px;
+    }
+    
+    .col-md-4 {
+        padding: 25px 15px;
+    }
+    
+    p {
+        font-size: 1.4rem;
+        margin-bottom: 20px;
+    }
+    
+    .table > tbody > tr > td {
+        padding: 12px;
+        font-size: 0.9rem;
+        display: block;
+        width: 100%;
+        text-align: center !important;
+    }
+    
+    .table > tbody > tr > td:first-child {
+        border-radius: 8px 8px 0 0;
+        padding-bottom: 8px;
+    }
+    
+    .table > tbody > tr > td:last-child {
+        border-radius: 0 0 8px 8px;
+        padding-top: 8px;
+        background: linear-gradient(135deg, #E0F7FF 0%, #D4F1F4 100%);
+    }
+}

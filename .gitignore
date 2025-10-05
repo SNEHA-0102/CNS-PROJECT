@@ -1,0 +1,12 @@
+# Node modules (too large to upload)
+node_modules/
+
+# Environment variables (keep secrets private)
+.env
+
+# Log files
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
